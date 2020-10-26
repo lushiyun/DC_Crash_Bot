@@ -15,7 +15,7 @@ const Header = () => (
     <Container>
       <nav className="flex justify-between items-center py-8">
         <Link href="/">
-          <a className="text-4xl">
+          <a className="text-5xl">
             walk<span className="text-green-800">safe.</span>
           </a>
         </Link>

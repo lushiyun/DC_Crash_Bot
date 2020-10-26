@@ -29,7 +29,7 @@ const Footer = () => {
               </span>{' '}
               by Code for DC
             </p>
-            <ul className="flex">
+            <ul className="flex mb-4">
               <SocialIcon href="https://codefordc.org/">
                 <BiLinkExternal />
               </SocialIcon>
@@ -40,6 +40,7 @@ const Footer = () => {
                 <FaTwitter />
               </SocialIcon>
             </ul>
+            <p className="text-xs">Copyright © WalkSafe DC {new Date().getFullYear()}</p>
           </div>
           <ul className="flex flex-col space-y-3">
             <li>
@@ -68,6 +69,13 @@ const Footer = () => {
                 name="Shiyun Lu"
                 picture="https://avatars2.githubusercontent.com/u/13009238?s=400&u=08005729d5e7048b28281a0bc5479f182b8a5288&v=4"
                 href="https://www.shiyunlu.com/"
+              />
+            </li>
+            <li>
+              <Avatar
+                name="Dilmurod Bukharov"
+                picture="https://avatars0.githubusercontent.com/u/55402928?s=400&u=0e0ce9d9929c31b25350f51984951ec44490f062&v=4"
+                href="https://www.dbukharov.com/"
               />
             </li>
           </ul>

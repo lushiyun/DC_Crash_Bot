@@ -2,7 +2,9 @@
 // import useSWR from 'swr';
 // const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-import data from '../data';
+import { useState } from 'react';
+
+import data from '../data.json';
 import TweetCard from './tweetCard';
 import Map from './map';
 
@@ -10,13 +12,15 @@ const Live = () => {
   // const { data, error } = useSWR('/api/tweets', fetcher);
   // if (error) return <div>failed to load</div>;
   // if (!data) return <div>Loading ... </div>;
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
 
   const renderedTweets = data.map((tweet) => (
     <TweetCard key={tweet.tweet.substr(-10)} text={tweet.tweet} />
   ));
 
   return (
-    <section className="flex mb-3 lg:flex-row-reverse mt-16 lg:mt-32">
+    <section className="flex flex-col mb-3 lg:flex-row-reverse mt-16 lg:mt-32">
       <div className="w-full lg:w-2/3" style={{ height: '80vh' }}>
         <Map
           isMarkerShown
